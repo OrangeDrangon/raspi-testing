@@ -1,0 +1,17 @@
+{
+  "name": "raspi-testing",
+  "version": "1.0.0",
+  "description": "testing of the node bindings for controlling to raspberry pi",
+  "main": "dist/index.js",
+  "repository": "https://github.com/OrangeDrangon/raspi-testing.git",
+  "author": "Kyle Rosenberg <kyle@ekrosenberg.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^11.10.5",
+    "@types/pigpio": "^1.2.1",
+    "source-map-support": "^0.5.10",
+    "tslint": "^5.13.1",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.3.3333"
+  }
+}
