@@ -3,6 +3,7 @@ FROM node:8-alpine
 WORKDIR /var/usr/app
 
 RUN apk add python
+RUN apk add make
 
 ADD package.json .
 ADD yarn.lock .
