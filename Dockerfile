@@ -2,7 +2,8 @@ FROM node:8-alpine
 
 WORKDIR /var/usr/app
 
-ADD package.json, yarn.lock ./
+ADD package.json .
+ADD yarn.lock .
 
 RUN yarn install
 
