@@ -11,6 +11,7 @@ const test = new Gpio(17, { mode: Gpio.OUTPUT });
 
 let i = 0;
 setInterval(() => {
+  console.log(i, (i / 255) * 3.3);
   test.analogWrite(i);
   i += 1;
   if (i > 255) {
