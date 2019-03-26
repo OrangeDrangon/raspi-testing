@@ -4,6 +4,8 @@ import 'source-map-support/register';
 // Imports the pin controlling library
 import { Gpio } from 'pigpio';
 
+console.log('Running...');
+
 // Initializes a test pin on pin 17 in output mode
 const test = new Gpio(17, { mode: Gpio.OUTPUT });
 
