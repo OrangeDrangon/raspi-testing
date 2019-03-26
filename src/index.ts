@@ -9,12 +9,10 @@ console.log('Running...');
 // Initializes a test pin on pin 17 in output mode
 const test = new Gpio(17, { mode: Gpio.OUTPUT });
 
-let i = 0;
 setInterval(() => {
-  console.log(i, (i / 255) * 3.3);
-  test.analogWrite(i);
-  i += 1;
-  if (i > 255) {
-    i = 0;
-  }
-},          100);
+  const date = new Date(Date.now());
+
+  console.log(date.getSeconds(), date.getSeconds() / 60 * 255);
+
+  test.analogWrite(date.getSeconds() / 60 * 255);
+},          10);
