@@ -12,7 +12,7 @@ const test = new Gpio(17, { mode: Gpio.OUTPUT });
 setInterval(() => {
   const date = new Date(Date.now());
 
-  console.log(date.getSeconds(), date.getSeconds() * date.getMilliseconds() / 60000 * 255);
+  console.log(date.getSeconds(), date.getSeconds() * (date.getMilliseconds() + 1) / 60000 * 255);
 
-  test.analogWrite(Math.round(date.getSeconds() * date.getMilliseconds() / 60000 * 255));
+  test.analogWrite(Math.round(date.getSeconds() * (date.getMilliseconds() + 1) / 60000 * 255));
 },          10);
