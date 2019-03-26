@@ -2,7 +2,7 @@ FROM node:8-alpine
 
 WORKDIR /var/usr/app
 
-RUN apk add python, make, g++
+RUN apk add python make g++
 
 ADD package.json .
 ADD yarn.lock .
