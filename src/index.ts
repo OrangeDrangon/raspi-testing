@@ -7,8 +7,11 @@ import { Gpio } from 'pigpio';
 // Initializes a test pin on pin 17 in output mode
 const test = new Gpio(17, { mode: Gpio.OUTPUT });
 
-// Sets the pin to full power
-
+let i = 0;
 setInterval(() => {
-  test.analogWrite(Math.floor(Math.random() * 255));
-},          1000);
+  test.analogWrite(i);
+  i += 1;
+  if (i > 255) {
+    i = 0;
+  }
+},          100);
