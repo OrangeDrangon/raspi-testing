@@ -1,8 +1,8 @@
-FROM node:8-alpine
+FROM balenalib/raspberrypi3-node:11
 
 WORKDIR /var/usr/app
 
-RUN apk add python make g++
+RUN apt-get update && apt-get install -yq --no-install-recommends pigpio
 
 ADD package.json .
 ADD yarn.lock .
