@@ -9,7 +9,7 @@ ADD yarn.lock .
 
 RUN yarn install
 
-ADD ./src ./src
+ADD . .
 
 RUN yarn tsc
 
