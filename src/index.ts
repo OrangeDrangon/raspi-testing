@@ -14,5 +14,5 @@ setInterval(() => {
 
   console.log(date.getSeconds(), date.getSeconds() / 60 * 255);
 
-  test.analogWrite(date.getSeconds() / 60 * 255);
+  test.analogWrite(Math.round(date.getSeconds() / 60 * 255));
 },          10);
