@@ -9,7 +9,7 @@ const test = new Gpio(17, { mode: Gpio.OUTPUT });
 
 let i = 0;
 setInterval(() => {
-  test.analogWrite(100);
+  test.analogWrite(i);
   i += 1;
   if (i > 255) {
     i = 0;
